@@ -10,73 +10,33 @@
 <body>
 
 <div class="container">
-	<div class="left-panel">
-		<div class="add-item-bar">
-			<input type="text" placeholder="Назва товару">
-			<button class="btn-add" data-tooltip="Додати новий товар до списку">Додати</button>
-</div>
+  <div class="left-panel">
+    <div class="add-item-bar">
+      <input type="text" id="new-item-input" placeholder="Назва товару">
+      <button class="btn-add" id="add-btn" data-tooltip="Додати новий товар до списку">Додати</button>
+    </div>
 
-<div class="item bought">
-	<span class="item-name">Помідори</span>
-	<div class="controls">
-		<button class="btn-circle btn-minus" data-tooltip="Зменшити кількість">-</button>
-		<span class="quantity">2</span>
-		<button class="btn-circle btn-plus" data-tooltip="Збільшити кількість">+</button>
-	</div>
-	<div class="actions">
-		<button class="btn-status" data-tooltip="Повернути до списку покупок">Не куплено</button>
-		<button class="btn-delete" data-tooltip="Видалити товар">x</button>
-	</div>
-</div>
-
-<div class="item">
-	<span class="item-name">Печиво</span>
-	<div class="controls">
-		<button class="btn-circle btn-minus" data-tooltip="Зменшити кількість">-</button>
-		<span class="quantity">2</span>
-		<button class="btn-circle btn-plus" data-tooltip="Збільшити кількість">+</button>
-	</div>
-	<div class="actions">
-		<button class="btn-status" data-tooltip="Позначити товар як куплений">Куплено</button>
-		<button class="btn-delete" data-tooltip="Видалити товар">x</button>
-	</div>
-</div>
-
-<div class="item">
-	<span class="item-name">Сир</span>
-	<div class="controls">
-		<button class="btn-circle btn-minus" data-tooltip="Зменшити кількість">-</button>
-		<span class="quantity">1</span>
-		<button class="btn-circle btn-plus" data-tooltip="Збільшити кількість">+</button>
-	</div>
-	<div class="actions">
-		<button class="btn-status" data-tooltip="Позначити товар як куплений">Куплено</button>
-		<button class="btn-delete" data-tooltip="Видалити товар">x</button>
-	</div>
+    <div id="items-container"></div>
   </div>
-</div>
 
-<div class="right-panel">
-	<div class="summary-section">
-		<h3>Залишилось</h3>
-		<div class="tags">
-			<span class="tag">Печиво <span class="tag-qty">2</span></span>
-			<span class="tag">Сир <span class="tag-qty">1</span></span>
-		</div>
-	</div>
-
-	<div class="summary-section">
-		<h3>Куплено</h3>
-		<span class="tag bought-tag">Помідори <span class="tag-qty">2</span></span>
-	</div>
+  <div class="right-panel">
+    <div class="summary-section">
+      <h3>Залишилося</h3>
+      <div class="tags" id="unbought-tags-container"></div>
+    </div>
+    
+    <div class="summary-section">
+      <h3>Куплено</h3>
+      <div class="tags" id="bought-tags-container"></div>
+    </div>
   </div>
- </div>
 </div>
 
 <div class="student-badge">
-	<div class="badge-title">Buy list</div>
-	<div class="badge-author">Created by:<br>Олексій</div>
+  <div class="badge-title">Buy List</div>
+  <div class="badge-author">Created by:<br>Олексій</div>
 </div>
 
-</body>	
+<script src="main.js"></script>
+</body>
 </html>
